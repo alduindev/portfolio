@@ -218,7 +218,7 @@ export default function Portfolio() {
             <div className="group max-w-[340px] justify-self-center rounded-[1.25rem] border border-[var(--border)] bg-[var(--surface)] p-[1.1rem] lg:max-w-none lg:justify-self-auto">
               <div className="relative aspect-[4/5] overflow-hidden rounded-[0.9rem] border border-[var(--border)] bg-[var(--surface-alt)]">
                 <img
-                  src="/profile.PNG"
+                  src={`${import.meta.env.BASE_URL}profile.PNG`}
                   alt="Foto de Uriel Cabada"
                   className="relative z-[1] h-full w-full object-cover object-top transition-transform duration-[6000ms] ease-out group-hover:scale-[1.04]"
                   style={{ filter: 'grayscale(0.45) contrast(1.08) brightness(0.96)' }}
