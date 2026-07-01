@@ -1,0 +1,55 @@
+@import 'tailwindcss';
+
+:root {
+  --bg: #0b0d10;
+  --surface: #14171b;
+  --surface-alt: #1a1e23;
+  --text: #eceff1;
+  --muted: #a7aeb8;
+  --border: rgba(255,255,255,0.09);
+  --border-strong: rgba(255,255,255,0.18);
+  --accent: #9b5cf2;
+  --accent-strong: #b383f7;
+  --panel: rgba(255,255,255,0.04);
+  --success: #5fd8a0;
+
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--text);
+  background-color: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.light {
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --surface-alt: #f8fafc;
+  --text: #0f172a;
+  --muted: #475569;
+  --border: rgba(15,23,42,0.08);
+  --border-strong: rgba(15,23,42,0.14);
+  --accent: #7c3aed;
+  --accent-strong: #9333ea;
+  --panel: rgba(15,23,42,0.03);
+  --success: #059669;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, rgba(2,6,23,1) 0%, rgba(17,24,39,1) 100%);
+  color: var(--text);
+}
+
+body.light {
+  background: linear-gradient(135deg, rgba(248,250,252,1) 0%, rgba(226,232,240,1) 100%);
+}
+
+#root {
+  min-height: 100vh;
+}
