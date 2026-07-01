@@ -7,7 +7,7 @@ export default defineConfig({
     outDir: 'build',
     sourcemap: false
   },
-  base: "/portfolio",
+  base: "/portfolio/",
   plugins: [react()],
   optimizeDeps: {
     include: ['esm-dep > cjs-dep'],

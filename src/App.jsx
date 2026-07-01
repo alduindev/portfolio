@@ -1,12 +1,13 @@
 import { BrowserRouter } from "react-router-dom";
 import Portfolio from "./components/Portfolio";
+import AuthState from "./context/auth/authState";
 
-function App() {
+export default function App() {
   return (
     <BrowserRouter basename="/portfolio">
-      <Portfolio />
+      <AuthState>
+        <Portfolio />
+      </AuthState>
     </BrowserRouter>
   );
 }
-
-export default App;
