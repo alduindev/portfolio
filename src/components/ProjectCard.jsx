@@ -31,7 +31,7 @@ function ProjectIcon({ type }) {
 
 export default function ProjectCard({ project }) {
   return (
-    <div className="rounded-[1.1rem] border border-[var(--border)] bg-[var(--surface)] p-[1.6rem] transition-all hover:-translate-y-1 hover:border-[var(--accent-strong)]">
+    <div className="rounded-lg border border-[var(--border)] bg-[var(--surface)] p-[1.35rem] backdrop-blur-xl transition-all hover:-translate-y-1 hover:border-[var(--accent-strong)] hover:shadow-[0_0_30px_rgba(173,198,255,.09)] md:p-[1.6rem]">
       <div className="mb-[1.2rem] flex h-[8.5rem] items-center justify-center rounded-xl border border-[var(--border)] bg-[var(--surface-alt)]">
         <ProjectIcon type={project.icon} />
       </div>

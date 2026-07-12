@@ -1,6 +1,6 @@
 export default function ExperienceCard({ role }) {
   return (
-    <article className="grid gap-6 rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-8 transition-colors hover:border-[var(--border-strong)] hover:bg-[var(--surface-alt)] md:grid-cols-[0.85fr_2.15fr]">
+    <article className="grid gap-5 rounded-lg border border-[var(--border)] border-l-[3px] border-l-[var(--accent)] bg-[var(--surface)] p-6 backdrop-blur-xl transition-all hover:border-[var(--accent)] hover:shadow-[0_0_28px_rgba(173,198,255,.08)] md:grid-cols-[0.85fr_2.15fr] md:p-8">
       <div>
         <h3 className="text-[1.08rem] font-semibold">{role.title}</h3>
         <p className="mt-[0.4rem] font-mono text-[0.76rem] uppercase tracking-[0.04em] text-[var(--muted)]">

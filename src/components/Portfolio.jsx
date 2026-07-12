@@ -76,9 +76,9 @@ export default function Portfolio() {
   const visibleRoles = timelineExpanded ? experience : experience.filter((r) => !r.hidden)
 
   return (
-    <div style={{ '--accent': '#9B5CF2', '--accent-strong': '#B383F7' }} className="relative min-h-screen bg-[var(--bg)] font-[Inter,sans-serif] text-[var(--text)]">
+    <div className="relative min-h-screen bg-[var(--bg)] font-[Inter,sans-serif] text-[var(--text)]">
       <div
-        className="pointer-events-none fixed inset-0 z-0 opacity-[0.035]"
+        className="pointer-events-none fixed inset-0 z-0 opacity-[0.025]"
         style={{
           backgroundImage:
             "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")",
@@ -90,11 +90,11 @@ export default function Portfolio() {
       </div>
 
       <header className="fixed inset-x-0 top-0 z-[60] border-b border-[var(--border)] bg-[var(--bg)]/[0.92] backdrop-blur-md">
-        <div className="mx-auto flex max-w-[1180px] items-center justify-between gap-4 px-7 py-[1.1rem]">
-          <button onClick={() => scrollTo('inicio')} className="font-serif text-[1.15rem] font-semibold tracking-wide">
-            URIEL<span className="text-[var(--accent-strong)]">.</span>CABADA
+        <div className="mx-auto flex h-20 max-w-[1400px] items-center justify-between gap-4 px-6 md:px-12 lg:px-20">
+          <button onClick={() => scrollTo('inicio')} className="font-[Sora,sans-serif] text-[1.05rem] font-bold tracking-[-.04em] text-[var(--accent-strong)]">
+            UC<span className="text-[var(--success)]">.</span>ARCHITECT
           </button>
-          <nav className="hidden gap-8 text-[0.92rem] text-[var(--muted)] md:flex">
+          <nav className="hidden gap-8 font-mono text-[0.75rem] uppercase tracking-[.08em] text-[var(--muted)] md:flex">
             {['sobre-mi', 'experiencia', 'stack', 'proyectos'].map((id) => (
               <button key={id} onClick={() => scrollTo(id)} className="capitalize transition-colors hover:text-[var(--text)]">
                 {railItems.find((r) => r.id === id)?.label}
@@ -179,18 +179,18 @@ export default function Portfolio() {
       </nav>
 
       <main className="relative z-[1]">
-        <section id="inicio" ref={setSectionRef('inicio')} className="border-b border-[var(--border)] px-7 pb-[5.5rem] pt-[9.5rem]">
-          <div className="mx-auto grid max-w-[1180px] items-center gap-14 lg:grid-cols-[1.15fr_0.85fr]">
+        <section id="inicio" ref={setSectionRef('inicio')} className="border-b border-[var(--border)] px-6 pb-20 pt-32 md:px-12 lg:px-20 lg:pb-28">
+          <div className="mx-auto grid min-h-[70vh] max-w-[1400px] items-center gap-14 md:grid-cols-2 lg:gap-20">
             <div>
-              <p className="mb-[0.9rem] flex items-center gap-2 font-mono text-[0.72rem] uppercase tracking-[0.16em] text-[var(--accent-strong)]">
-                <span className="h-[6px] w-[6px] rounded-full bg-[var(--accent)]" />
+              <p className="mb-5 flex items-center gap-2 font-mono text-[0.7rem] uppercase tracking-[0.16em] text-[var(--success)]">
+                <span className="h-2 w-2 animate-pulse rounded-full bg-[var(--success)] shadow-[0_0_10px_var(--success)]" />
                 {t.heroRole}
               </p>
-              <h1 className="font-serif text-[clamp(2.4rem,5vw,3.6rem)] font-semibold leading-[1.06] tracking-tight">
+              <h1 className="font-[Sora,sans-serif] text-[clamp(2.25rem,5vw,3.5rem)] font-bold leading-[1.08] tracking-[-.035em]">
                 Uriel Cabada
                 <br />
                 <span
-                  className="mt-1 block min-h-[1.3em] font-serif text-[clamp(1.4rem,2.6vw,1.9rem)] font-normal italic text-[var(--muted)] transition-opacity duration-300"
+                  className="mt-2 block min-h-[1.3em] font-[Sora,sans-serif] text-[clamp(1.25rem,2.6vw,1.75rem)] font-normal text-[var(--accent-strong)] transition-opacity duration-300"
                   style={{ opacity: fading ? 0 : 1 }}
                 >
                   {t.taglines[phraseIndex].lede}
@@ -206,17 +206,17 @@ export default function Portfolio() {
                 {t.heroText}
               </p>
               <div className="flex flex-wrap gap-[0.9rem]">
-                <button onClick={() => scrollTo('proyectos')} className="rounded-full bg-[var(--accent)] px-6 py-[0.8rem] text-[0.94rem] font-medium text-white transition-all hover:bg-[var(--accent-strong)] hover:shadow-[0_8px_24px_rgba(155,92,242,0.14)]">
+                <button onClick={() => scrollTo('proyectos')} className="rounded bg-[var(--accent-strong)] px-6 py-[0.8rem] font-mono text-[0.82rem] font-semibold text-[#002e6a] transition-all hover:shadow-[0_0_24px_rgba(173,198,255,.22)]">
                   {t.projectsButton}
                 </button>
-                <button onClick={() => scrollTo('contacto')} className="rounded-full border border-[var(--border-strong)] px-6 py-[0.8rem] text-[0.94rem] font-medium transition-colors hover:border-[var(--accent-strong)] hover:text-[var(--accent-strong)]">
+                <button onClick={() => scrollTo('contacto')} className="rounded border border-[var(--border-strong)] px-6 py-[0.8rem] font-mono text-[0.82rem] font-medium transition-colors hover:border-[var(--accent-strong)] hover:bg-[var(--panel)] hover:text-[var(--accent-strong)]">
                   {t.talkButton}
                 </button>
               </div>
             </div>
 
-            <div className="group max-w-[340px] justify-self-center rounded-[1.25rem] border border-[var(--border)] bg-[var(--surface)] p-[1.1rem] lg:max-w-none lg:justify-self-auto">
-              <div className="relative aspect-[4/5] overflow-hidden rounded-[0.9rem] border border-[var(--border)] bg-[var(--surface-alt)]">
+            <div className="group relative w-full max-w-[420px] justify-self-center rounded-lg border border-[var(--border-strong)] bg-[var(--surface)] p-3 shadow-[0_0_50px_rgba(77,142,255,.08)] backdrop-blur-xl after:absolute after:right-0 after:top-0 after:h-4 after:w-4 after:border-r-2 after:border-t-2 after:border-[var(--accent-strong)] md:p-4">
+              <div className="relative aspect-square overflow-hidden rounded border border-[var(--border)] bg-[var(--surface-alt)]">
                 <img
                   src={`${import.meta.env.BASE_URL}profile.PNG`}
                   alt="Foto de Uriel Cabada"
@@ -242,20 +242,20 @@ export default function Portfolio() {
           </div>
         </section>
 
-        <section id="sobre-mi" ref={setSectionRef('sobre-mi')} className="border-b border-[var(--border)] px-7 py-[5.5rem]">
-          <div className="mx-auto max-w-[1180px]">
+        <section id="sobre-mi" ref={setSectionRef('sobre-mi')} className="border-b border-[var(--border)] px-6 py-20 md:px-12 lg:px-20 lg:py-28">
+          <div className="mx-auto max-w-[1400px]">
             <SectionHeader label={t.aboutLabel} title={t.aboutHeadline} />
             <Reveal className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
-              <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-[1.9rem]">
+              <div className="rounded-lg border border-[var(--border)] bg-[var(--surface)] p-[1.9rem] backdrop-blur-xl">
                 <p className="mb-[0.9rem] text-[var(--muted)]">{t.aboutText1}</p>
                 <p className="text-[var(--muted)]">{t.aboutText2}</p>
               </div>
               <div className="flex flex-col gap-6">
-                <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-6">
+                <div className="rounded-lg border border-[var(--border)] bg-[var(--surface)] p-6 backdrop-blur-xl">
                   <h3 className="mb-[0.6rem] text-[1rem] font-semibold text-[var(--accent)]">{t.professionalTitle}</h3>
                   <p className="text-[0.92rem] text-[var(--muted)]">{t.professionalText}</p>
                 </div>
-                <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-6">
+                <div className="rounded-lg border border-[var(--border)] bg-[var(--surface)] p-6 backdrop-blur-xl">
                   <h3 className="mb-[0.6rem] text-[1rem] font-semibold text-[var(--accent)]">{t.lifeTitle}</h3>
                   <p className="text-[0.92rem] text-[var(--muted)]">{t.lifeText}</p>
                 </div>
@@ -264,8 +264,8 @@ export default function Portfolio() {
           </div>
         </section>
 
-        <section id="experiencia" ref={setSectionRef('experiencia')} className="border-b border-[var(--border)] px-7 py-[5.5rem]">
-          <div className="mx-auto max-w-[1180px]">
+        <section id="experiencia" ref={setSectionRef('experiencia')} className="border-b border-[var(--border)] px-6 py-20 md:px-12 lg:px-20 lg:py-28">
+          <div className="mx-auto max-w-[1400px]">
             <SectionHeader label={t.experienceLabel} title={t.experienceHeadline} />
 
             <Reveal className="flex flex-col gap-[1.1rem]" as="div">
@@ -281,15 +281,15 @@ export default function Portfolio() {
               {timelineExpanded ? t.viewLessLabel : t.viewFullLabel}
             </button>
 
-            <Reveal className="mt-6 rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-[1.9rem]" as="div">
+            <Reveal className="mt-6 rounded-lg border border-[var(--border)] bg-[var(--surface)] p-[1.9rem] backdrop-blur-xl" as="div">
               <h3 className="mb-[0.6rem] text-[1rem] font-semibold text-[var(--accent)]">{t.additionalExperienceTitle}</h3>
               <p className="text-[0.92rem] text-[var(--muted)]">{t.additionalExperience}</p>
             </Reveal>
           </div>
         </section>
 
-        <section id="stack" ref={setSectionRef('stack')} className="border-b border-[var(--border)] px-7 py-[5.5rem]">
-          <div className="mx-auto max-w-[1180px]">
+        <section id="stack" ref={setSectionRef('stack')} className="border-b border-[var(--border)] px-6 py-20 md:px-12 lg:px-20 lg:py-28">
+          <div className="mx-auto max-w-[1400px]">
             <SectionHeader label={t.stackLabel} title={t.stackHeadline} />
             <Reveal className="grid gap-[1.1rem] sm:grid-cols-2 lg:grid-cols-3">
               {stack.map((card) => (
@@ -299,10 +299,10 @@ export default function Portfolio() {
           </div>
         </section>
 
-        <section id="ia" ref={setSectionRef('ia')} className="border-b border-[var(--border)] px-7 py-[5.5rem]">
-          <div className="mx-auto max-w-[1180px]">
+        <section id="ia" ref={setSectionRef('ia')} className="border-b border-[var(--border)] px-6 py-20 md:px-12 lg:px-20 lg:py-28">
+          <div className="mx-auto max-w-[1400px]">
             <SectionHeader label={t.iaLabel} title={t.iaHeadline} />
-            <Reveal className="grid items-center gap-10 rounded-[1.1rem] border border-[var(--border)] p-[2.4rem] md:grid-cols-[0.9fr_1.1fr]" style={{ background: 'linear-gradient(160deg, var(--surface), var(--surface-alt))' }}>
+            <Reveal className="grid items-center gap-10 rounded-lg border border-[var(--border-strong)] p-7 backdrop-blur-xl md:grid-cols-[0.9fr_1.1fr] md:p-10" style={{ background: 'linear-gradient(135deg, rgba(173,198,255,.09), var(--surface) 48%, rgba(78,222,163,.04))' }}>
               <p className="font-serif text-[clamp(1.3rem,2.4vw,1.7rem)] font-normal italic leading-[1.35]">
                 La IA <span className="text-[var(--accent-strong)]">acelera la ejecución</span>; el criterio técnico sigue siendo mío.
               </p>
@@ -317,8 +317,8 @@ export default function Portfolio() {
             </Reveal>
           </div>
         </section>
-        <section id="proyectos" ref={setSectionRef('proyectos')} className="border-b border-[var(--border)] px-7 py-[5.5rem]">
-          <div className="mx-auto max-w-[1180px]">
+        <section id="proyectos" ref={setSectionRef('proyectos')} className="border-b border-[var(--border)] px-6 py-20 md:px-12 lg:px-20 lg:py-28">
+          <div className="mx-auto max-w-[1400px]">
             <SectionHeader label={t.projectsLabel} title={t.projectsHeadline} />
             <Reveal className="grid gap-[1.1rem] lg:grid-cols-3">
               {projects.map((project) => (
@@ -329,8 +329,8 @@ export default function Portfolio() {
         </section>
       </main>
 
-      <footer id="contacto" ref={setSectionRef('contacto')} className="px-7 py-[5.5rem] pb-16">
-        <div className="mx-auto max-w-[1180px]">
+      <footer id="contacto" ref={setSectionRef('contacto')} className="px-6 py-20 md:px-12 lg:px-20 lg:py-28">
+        <div className="mx-auto max-w-[1400px]">
           <Reveal className="flex flex-wrap items-end justify-between gap-8">
             <div>
               <p className="mb-[0.9rem] font-mono text-[0.72rem] uppercase tracking-[0.16em] text-[var(--accent)]">{t.contactLabel}</p>

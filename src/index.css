@@ -3,17 +3,17 @@
 @tailwind utilities;
 
 :root {
-  --bg: #0b0d10;
-  --surface: #14171b;
-  --surface-alt: #1a1e23;
-  --text: #eceff1;
-  --muted: #a7aeb8;
-  --border: rgba(255,255,255,0.09);
-  --border-strong: rgba(255,255,255,0.18);
-  --accent: #9b5cf2;
-  --accent-strong: #b383f7;
-  --panel: rgba(255,255,255,0.04);
-  --success: #5fd8a0;
+  --bg: #0b0e14;
+  --surface: rgba(29, 32, 38, 0.72);
+  --surface-alt: rgba(39, 42, 49, 0.72);
+  --text: #e1e2eb;
+  --muted: #c2c6d6;
+  --border: rgba(173, 198, 255, 0.12);
+  --border-strong: rgba(173, 198, 255, 0.3);
+  --accent: #7aa7ff;
+  --accent-strong: #adc6ff;
+  --panel: rgba(173, 198, 255, 0.06);
+  --success: #4edea3;
 
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -34,8 +34,8 @@
   --muted: #475569;
   --border: rgba(15,23,42,0.08);
   --border-strong: rgba(15,23,42,0.14);
-  --accent: #7c3aed;
-  --accent-strong: #9333ea;
+  --accent: #005ac2;
+  --accent-strong: #004395;
   --panel: rgba(15,23,42,0.03);
   --success: #059669;
 }
@@ -44,7 +44,9 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  background: linear-gradient(135deg, rgba(2,6,23,1) 0%, rgba(17,24,39,1) 100%);
+  background-color: var(--bg);
+  background-image: radial-gradient(circle at 2px 2px, rgba(173,198,255,.065) 1px, transparent 0), radial-gradient(circle at 78% 8%, rgba(77,142,255,.11), transparent 28rem);
+  background-size: 24px 24px, 100% 100%;
   color: var(--text);
 }
 
@@ -55,3 +57,6 @@ body.light {
 #root {
   min-height: 100vh;
 }
+
+button, a { -webkit-tap-highlight-color: transparent; }
+::selection { background: rgba(173,198,255,.28); }
