@@ -15,7 +15,7 @@ export const localeData = {
       { lede: 'automatiza procesos con criterio y control.', sub: 'Scripts · pipelines · integraciones' },
       { lede: 'lleva soluciones al entorno de producción con confianza.', sub: 'CI/CD · monitoreo · uptime' },
     ],
-    heroRole: 'Ingeniero Informático · Full Stack',
+    heroRole: 'Analista Desarrollador · Full Stack',
     heroText:
       'Desarrollo aplicaciones web full stack con foco en arquitectura sólida, ciberseguridad aplicada y automatización de procesos. Combino diseño funcional con criterio técnico real: rendimiento, seguridad, APIs robustas y mantenibilidad en entornos de producción.',
     aboutLabel: 'Sobre mí',
@@ -129,7 +129,7 @@ export const localeData = {
 
 export const experience = [
   {
-    title: 'Ingeniero Informático Senior · MOK',
+    title: 'Analista Desarrollador Senior · MOK',
     dates: 'Jul 2023 — actualidad · 3 años',
     place: 'Lima · Híbrido',
     description:
@@ -157,7 +157,7 @@ export const experience = [
     hidden: false,
   },
   {
-    title: 'Ingeniero Informático Full Stack · Workana',
+    title: 'Analista Desarrollador Full Stack · Workana',
     dates: 'Jul 2020 — May 2022 · 1 año 11 meses',
     place: 'Lima · Independiente',
     description:
@@ -171,7 +171,7 @@ export const experience = [
     hidden: false,
   },
   {
-    title: 'Ingeniero Informático · DOCTOR ANDREU Q.F.',
+    title: 'Analista Desarrollador SemiSenior · DOCTOR ANDREU Q.F.',
     dates: 'Abr 2019 — Feb 2022 · 2 años 11 meses',
     place: 'Lima, Perú',
     description:
@@ -184,7 +184,7 @@ export const experience = [
     hidden: true,
   },
   {
-    title: 'Ingeniero Informático · UCODE',
+    title: 'Analista Desarrollador SemiSenior · UCODE',
     dates: 'Ene 2017 — Feb 2019 · 2 años 2 meses',
     place: 'Perú',
     description:

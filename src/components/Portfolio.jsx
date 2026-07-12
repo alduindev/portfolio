@@ -92,7 +92,7 @@ export default function Portfolio() {
       <header className="fixed inset-x-0 top-0 z-[60] border-b border-[var(--border)] bg-[var(--bg)]/[0.92] backdrop-blur-md">
         <div className="mx-auto flex h-20 max-w-[1400px] items-center justify-between gap-4 px-6 md:px-12 lg:px-20">
           <button onClick={() => scrollTo('inicio')} className="font-[Sora,sans-serif] text-[1.05rem] font-bold tracking-[-.04em] text-[var(--accent-strong)]">
-            UC<span className="text-[var(--success)]">.</span>ARCHITECT
+            UC
           </button>
           <nav className="hidden gap-8 font-mono text-[0.75rem] uppercase tracking-[.08em] text-[var(--muted)] md:flex">
             {['sobre-mi', 'experiencia', 'stack', 'proyectos'].map((id) => (
