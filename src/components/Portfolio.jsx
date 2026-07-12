@@ -4,7 +4,7 @@ import SectionHeader from './SectionHeader'
 import ExperienceCard from './ExperienceCard'
 import InfoCard from './InfoCard'
 import ProjectCard from './ProjectCard'
-import { localeData, experience, stack, projects } from '../data'
+import { localeData, experienceData, stackData, projectsData } from '../data'
 
 export default function Portfolio() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -17,6 +17,9 @@ export default function Portfolio() {
   const [theme, setTheme] = useState('dark')
 
   const t = localeData[locale]
+  const experience = experienceData[locale]
+  const stack = stackData[locale]
+  const projects = projectsData[locale]
 
   const railItems = t.railItems
 
@@ -73,6 +76,12 @@ export default function Portfolio() {
     document.documentElement.classList.toggle('light', theme === 'light')
   }, [theme])
 
+  useEffect(() => {
+    document.documentElement.lang = locale
+    document.title = t.pageTitle
+    setPhraseIndex(0)
+  }, [locale, t.pageTitle])
+
   const visibleRoles = timelineExpanded ? experience : experience.filter((r) => !r.hidden)
 
   return (
@@ -121,7 +130,7 @@ export default function Portfolio() {
                 {t.talkButton}
               </button>
             <button
-              aria-label="Abrir menú"
+              aria-label={menuOpen ? t.closeMenuLabel : t.openMenuLabel}
                 aria-expanded={menuOpen}
                 onClick={() => setMenuOpen((v) => !v)}
                 className="relative h-[2.2rem] w-[2.2rem] flex-none rounded-[0.6rem] border border-[var(--border-strong)] md:hidden"
@@ -153,7 +162,7 @@ export default function Portfolio() {
         </button>
       </div>
 
-      <nav aria-label="Navegación de secciones" className="fixed left-9 top-1/2 z-50 hidden -translate-y-1/2 flex-col items-start gap-[1.55rem] xl:flex">
+      <nav aria-label={t.sectionsNavLabel} className="fixed left-9 top-1/2 z-50 hidden -translate-y-1/2 flex-col items-start gap-[1.55rem] xl:flex">
         <div className="pointer-events-none absolute bottom-1.5 left-[3px] top-1.5 w-px bg-[var(--border)]" />
         {railItems.map((item) => {
           const active = activeSection === item.id
@@ -219,7 +228,7 @@ export default function Portfolio() {
               <div className="relative aspect-square overflow-hidden rounded border border-[var(--border)] bg-[var(--surface-alt)]">
                 <img
                   src={`${import.meta.env.BASE_URL}profile.PNG`}
-                  alt="Foto de Uriel Cabada"
+                  alt={t.profileAlt}
                   className="relative z-[1] h-full w-full object-cover object-top transition-transform duration-[6000ms] ease-out group-hover:scale-[1.04]"
                   style={{ filter: 'grayscale(0.45) contrast(1.08) brightness(0.96)' }}
                 />
@@ -304,7 +313,7 @@ export default function Portfolio() {
             <SectionHeader label={t.iaLabel} title={t.iaHeadline} />
             <Reveal className="grid items-center gap-10 rounded-lg border border-[var(--border-strong)] p-7 backdrop-blur-xl md:grid-cols-[0.9fr_1.1fr] md:p-10" style={{ background: 'linear-gradient(135deg, rgba(173,198,255,.09), var(--surface) 48%, rgba(78,222,163,.04))' }}>
               <p className="font-serif text-[clamp(1.3rem,2.4vw,1.7rem)] font-normal italic leading-[1.35]">
-                La IA <span className="text-[var(--accent-strong)]">acelera la ejecución</span>; el criterio técnico sigue siendo mío.
+                {t.iaQuoteBefore} <span className="text-[var(--accent-strong)]">{t.iaQuoteHighlight}</span>{t.iaQuoteAfter}
               </p>
               <ul>
                 {t.iaList.map((item) => (
@@ -345,7 +354,7 @@ export default function Portfolio() {
           </Reveal>
           <div className="mt-14 flex flex-wrap justify-between gap-3 border-t border-[var(--border)] pt-6 text-[0.82rem] text-[var(--muted)]">
             <span>© 2026 Uriel Cabada</span>
-            <span>Lima, Perú</span>
+            <span>{t.footerLocation}</span>
           </div>
         </div>
       </footer>

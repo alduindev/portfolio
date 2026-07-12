@@ -28,8 +28,6 @@ export const localeData = {
     experienceHeadline: 'Trayectoria real, sólida y enfocada en producto.',
     viewFullLabel: 'Ver trayectoria completa',
     viewLessLabel: 'Ver menos',
-    additionalExperience:
-      'También trabajé en roles tempranos relacionados con diseño digital, branding y desarrollo web en empresas como Anatip, Mateo Propiedades, Conecta2 y Publicidad Gabrielito.',
     stackLabel: 'Conocimientos técnicos',
     stackHeadline: 'Tecnologías y prácticas que aportan confianza al equipo.',
     iaLabel: 'Uso de IA',
@@ -61,6 +59,15 @@ export const localeData = {
     languageButton: 'EN',
     themeButtonLight: 'Claro',
     themeButtonDark: 'Oscuro',
+    pageTitle: 'Uriel Cabada · Portafolio',
+    openMenuLabel: 'Abrir menú',
+    closeMenuLabel: 'Cerrar menú',
+    sectionsNavLabel: 'Navegación de secciones',
+    profileAlt: 'Foto de Uriel Cabada',
+    iaQuoteBefore: 'La IA',
+    iaQuoteHighlight: 'acelera la ejecución',
+    iaQuoteAfter: '; el criterio técnico sigue siendo mío.',
+    footerLocation: 'Lima, Perú',
   },
   en: {
     railItems: [
@@ -91,8 +98,6 @@ export const localeData = {
     experienceHeadline: 'Real, solid experience focused on product.',
     viewFullLabel: 'View full experience',
     viewLessLabel: 'View less',
-    additionalExperience:
-      'I also worked in early roles involving digital design, branding, and web development for agencies and startups.',
     stackLabel: 'Technical skills',
     stackHeadline: 'Technologies and practices that bring confidence to the team.',
     iaLabel: 'AI usage',
@@ -124,10 +129,19 @@ export const localeData = {
     languageButton: 'ES',
     themeButtonLight: 'Light',
     themeButtonDark: 'Dark',
+    pageTitle: 'Uriel Cabada · Portfolio',
+    openMenuLabel: 'Open menu',
+    closeMenuLabel: 'Close menu',
+    sectionsNavLabel: 'Section navigation',
+    profileAlt: 'Portrait of Uriel Cabada',
+    iaQuoteBefore: 'AI',
+    iaQuoteHighlight: 'accelerates execution',
+    iaQuoteAfter: '; technical judgment remains mine.',
+    footerLocation: 'Lima, Peru',
   },
 }
 
-export const experience = [
+const experienceEs = [
   {
     title: 'Analista Desarrollador Senior · MOK',
     dates: 'Jul 2023 — actualidad · 3 años',
@@ -216,7 +230,7 @@ export const experience = [
   },
 ]
 
-export const stack = [
+const stackEs = [
   { title: 'Backend', text: 'Node.js, Express, APIs REST, GraphQL, WebSockets, diseño de endpoints y microservicios.' },
   { title: 'Frontend', text: 'React, Vue.js, Vite, TypeScript, interfaces responsivas con foco en UX.' },
   { title: 'Git & colaboración', text: 'Flujos de ramas, PRs, code review y comunicación técnica clara.' },
@@ -233,7 +247,7 @@ export const iaList = [
   'Puedo leer, entender y corregir código sin depender de la herramienta.',
 ]
 
-export const projects = [
+const projectsEs = [
   {
     title: 'Landing Experience',
     description: 'Diseño y desarrollo de una experiencia de conversión con foco en narrativa visual y rendimiento.',
@@ -253,3 +267,119 @@ export const projects = [
     icon: 'commerce',
   },
 ]
+
+const experienceEn = [
+  {
+    title: 'Senior Developer Analyst · MOK',
+    dates: 'Jul 2023 — present · 3 years',
+    place: 'Lima · Hybrid',
+    description: 'Design and development of scalable web applications with modern architectures for insurance, assistance, and service products.',
+    bullets: [
+      'Development with React.js, JavaScript ES6+, TypeScript, and reusable components.',
+      'Design and implementation of REST APIs, microservices, and backend services.',
+      'Performance optimization, code refactoring, and platform maintainability improvements.',
+      'Collaboration with agile teams and participation in AI and automation projects.',
+    ],
+    hidden: false,
+  },
+  {
+    title: 'Full Stack Developer Analyst · EVOL (TSnet)',
+    dates: 'Oct 2022 — Mar 2023 · 6 months',
+    place: 'Remote',
+    description: 'Implementation of the Cima packaging system platform, integrating frontend, backend, and deployment processes for production environments.',
+    bullets: [
+      'Interface development with React.js, JavaScript, and Material UI.',
+      'Containerization with Docker and deployments using Jenkins and Kubernetes.',
+      'Application of information security controls and ongoing product support.',
+      'Technical coordination with the team and remote incident management.',
+    ],
+    hidden: false,
+  },
+  {
+    title: 'Full Stack Developer Analyst · Workana',
+    dates: 'Jul 2020 — May 2022 · 1 year 11 months',
+    place: 'Lima · Freelance',
+    description: 'Independent web and mobile development projects focused on APIs, backend systems, and process automation.',
+    bullets: [
+      'Backend development with Node.js, Laravel, PHP, and secure REST APIs.',
+      'Integration of relational and non-relational databases (MySQL, SQL, MongoDB).',
+      'Automation and scraping with Python; hybrid apps with Flutter.',
+      'Implementation of solutions with WordPress, React, and containerized environments.',
+    ],
+    hidden: false,
+  },
+  {
+    title: 'Mid-level Developer Analyst · DOCTOR ANDREU Q.F.',
+    dates: 'Apr 2019 — Feb 2022 · 2 years 11 months',
+    place: 'Lima, Peru',
+    description: 'Development and integration of web services, APIs, and cybersecurity solutions for corporate platforms and websites.',
+    bullets: [
+      'REST API implementation in PHP with MySQL, SQLite3, and SQL Server connectivity.',
+      'Google Workspace and ADS administration, plus technical security procedures.',
+      'Frontend, backend, and database development for several web portals.',
+    ],
+    hidden: true,
+  },
+  {
+    title: 'Mid-level Developer Analyst · UCODE',
+    dates: 'Jan 2017 — Feb 2019 · 2 years 2 months',
+    place: 'Peru',
+    description: 'Development of functional web modules and applications, CMS administration, and database support for a range of clients.',
+    bullets: [
+      'Development with Laravel, MySQL, PostgreSQL, and web service management.',
+      'SEO optimization, hosting support, and landing-page maintenance.',
+      'Integration of APIs, WordPress CMS, and custom web systems.',
+    ],
+    hidden: true,
+  },
+  {
+    title: 'Web Developer · MC Soluciones Inteligentes',
+    dates: 'Mar 2016 — Nov 2016 · 9 months',
+    place: 'Peru',
+    description: 'Website creation with PHP, MySQL, and Joomla, complemented by graphic design for advertising materials.',
+    bullets: [],
+    hidden: true,
+  },
+  {
+    title: 'Junior Web Developer · NeoDesign',
+    dates: 'Jan 2014 — Sep 2014 · 9 months',
+    place: 'Peru',
+    description: 'Web development and maintenance, API consumption, scraping, and interface design for corporate events.',
+    bullets: [],
+    hidden: true,
+  },
+]
+
+const stackEn = [
+  { title: 'Backend', text: 'Node.js, Express, REST APIs, GraphQL, WebSockets, endpoint design, and microservices.' },
+  { title: 'Frontend', text: 'React, Vue.js, Vite, TypeScript, and responsive interfaces focused on UX.' },
+  { title: 'Git & collaboration', text: 'Branching workflows, pull requests, code reviews, and clear technical communication.' },
+  { title: 'Infrastructure & data', text: 'Docker, Oracle Cloud, Nginx, PM2, SSL, MongoDB, MySQL, and SQLite.' },
+  { title: 'Security', text: 'Secure authentication, rate limiting, data validation, and vulnerability analysis.' },
+  { title: 'Quality', text: 'Clean code, responsive design, SEO, and deployment to real production environments.' },
+]
+
+const projectsEn = [
+  {
+    title: 'Landing Experience',
+    description: 'Design and development of a conversion experience focused on visual storytelling and performance.',
+    tags: 'React · Tailwind · Performance',
+    icon: 'landing',
+  },
+  {
+    title: 'Product Dashboard',
+    description: 'Product dashboard with clear metrics, intuitive navigation, and a scalable backend for data analysis and synchronization.',
+    tags: 'Next.js · APIs · Architecture',
+    icon: 'dashboard',
+  },
+  {
+    title: 'Commerce Interface',
+    description: 'Interface for an online store, prioritizing a smooth experience, trust, and conversion.',
+    tags: 'Figma · Frontend · UX',
+    icon: 'commerce',
+  },
+]
+
+export const experienceData = { es: experienceEs, en: experienceEn }
+export const stackData = { es: stackEs, en: stackEn }
+export const projectsData = { es: projectsEs, en: projectsEn }
